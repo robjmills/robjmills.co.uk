@@ -5,7 +5,9 @@ date:   2016-04-21 18:14:55 +0000
 categories: dev php composer
 ---
 
-![vagrant](/assets/images/php-fig.jpg){:class="img-responsive"}
+![vagrant](/assets/images/composer-lock.png){:class="img-responsive"}
+
+_originally posted on blog.devteaminc.co_
 
 We've been using Sagepay, previously known as Protx, as the primary PSP within Liquidshop for a long time. We've had a solid integration for a long time too, but all based on completely bespoke code. With some recent updates to Sagepay it's become time to update this integratation to make use of some newer features.
 
@@ -62,7 +64,5 @@ There's a few things here i'm not sure about. I've created a package name here o
 The version number I have used reflects the protocol version this code is to use. As far as I can tell the code itself is not versioned in this way, and there is no reference to them adhering to Semver. I assume the version is used for the managing of updates so this is something i'll have to look at more. The other questionable element is the autoload section. The Sagepay code itself contains it's own spl autoloader which is launched by lib/sagepay.php. This file also creates a PHP Constant which is used to restrict access to the other code within their kit. For this reason i'm just using the autoload files option to load this single file, which in turn autoloads all that is needed. Effectively I now have 2 autoloaders being used but i'm comfortable that the positives outweigh the negatives here.
 
 By now running composer update `sagepay/sagepay` I can now pull in this code direct from the Sagepay server into my vendor directory. From here i'm now good to get on with completing the integration, having used a non-composer compatible library within Composer. Pretty awesome.
-
-_originally posted on blog.devteaminc.co_
 
 [packagist-link]: https://packagist.org/
