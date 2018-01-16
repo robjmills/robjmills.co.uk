@@ -3,6 +3,7 @@ layout: post
 title:  Enforcing Git hooks with Composer
 date:   2018-01-14 18:14:55 +0000
 categories: dev composer git
+excerpt: Using composer install to enforce installation of Git hooks.
 ---
 
 ![vagrant](/assets/images/git.png){:class="img-responsive"}

@@ -3,6 +3,7 @@ layout: post
 title:  Automatic psr2 coding standard with PHP_CodeSniffer and Git
 date:   2018-01-14 18:14:55 +0000
 categories: dev php git phpcs psr2
+excerpt: Automating the checking and application of PHP_CodeSniffer checks using a Git hook.
 ---
 
 ![vagrant](/assets/images/php-fig.jpg){:class="img-responsive"}

@@ -3,6 +3,7 @@ layout: post
 title:  "Setting server time in Vagrant"
 date:   2016-04-25 10:36:55 +0000
 categories: dev vagrant
+excerpt: quick tip on how you can override the server time in a Vagrant box (should you need to).
 ---
 
 ![vagrant](/assets/images/vagrant.png){:class="img-responsive"}

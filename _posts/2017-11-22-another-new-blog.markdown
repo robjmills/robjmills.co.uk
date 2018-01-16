@@ -3,6 +3,7 @@ layout: post
 title:  "New blog on Jekyll"
 date:   2017-11-22 10:36:55 +0000
 categories: news
+excerpt: new year, new blog, same old posts....
 ---
 
 ![vagrant](/assets/images/jekyll-logo-light-transparent.png){:class="img-responsive"}

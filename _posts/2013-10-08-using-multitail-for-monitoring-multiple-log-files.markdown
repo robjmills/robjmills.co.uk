@@ -3,6 +3,7 @@ layout: post
 title:  Using multitail for monitoring multiple log files
 date:   2013-08-08 11:14:55 +0000
 categories: dev
+excerpt: using the handy multitail tool for watching multiple log files.
 ---
 
 Like many developers my job tends to include a number of low-level sysadmin tasks. I generally have terminal.app open most the day with one thing or another, whether working locally or SSH’ed into one of our remote servers. Once an app is in production its really handy to keep an eye on the server logs to see whats happening and be able to respond proactively to errors as they occur. Multitail is a great tool I found for monitoring multiple log files at the same time, helping to keep all of this monitoring in a single window.

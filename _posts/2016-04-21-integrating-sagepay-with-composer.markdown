@@ -3,7 +3,7 @@ layout: post
 title:  Integrating Sagepay using Composer ...or using Composer to manage a non-Composer compatible library
 date:   2016-04-21 18:14:55 +0000
 categories: dev php composer
-<!-- excerpt: How to load a package using Composer, which isn't available as a package -->
+excerpt: How to load a package using Composer, which isn't available as a package.
 ---
 
 ![vagrant](/assets/images/composer-lock.png){:class="img-responsive"}
