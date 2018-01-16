@@ -13,22 +13,22 @@ In simple terms multitail allows you to monitor multiple files simultaneously. I
 
 A simple use of multitail could be:
 
-```
+{% highlight bash %}
 multitail
 -l "ssh root@REMOTE.IP.1 tail -f /usr/local/apache/logs/error_log"
 -l "ssh root@REMOTE.IP.2 tail -f /usr/local/apache/logs/error_log"
-```
+{% endhighlight %}
 
 
 One of the most powerful features in multitail is the ability to add exceptions based on regular expression patterns. This allows you to filter out any errors which you’re not as interested in. For example, if you’re monitoring a log for PHP errors you may be less interested in 404 errors. This can lead to a more advanced multitail usage like this which includes named windows and multitail divided into vertical columns:
 
-```
+{% highlight bash %}
 multitail -du -C -s 2
 -Ev "does not exist" -Ev "filter this" -Ev "dont show this"
 -t WindowName1 -l "ssh root@REMOTE.IP.1 tail -f /usr/local/apache/logs/error_log"
 -t WindowName2 -l "ssh root@REMOTE.IP.2 tail -f /usr/local/apache/logs/error_log"
 -t WindowName3 -l "ssh root@REMOTE.IP.3 tail -f /usr/local/apache/logs/error_log"
 -t WindowName4 -l "ssh root@REMOTE.IP.4 tail -f /usr/local/apache/logs/error_log"
-```
+{% endhighlight %}
 
 Installation of multitail is really simple if you’re using Homebrew, simply `brew install multitail` and you’re ready to go.

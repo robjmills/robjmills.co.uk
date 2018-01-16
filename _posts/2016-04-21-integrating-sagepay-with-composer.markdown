@@ -3,6 +3,7 @@ layout: post
 title:  Integrating Sagepay using Composer ...or using Composer to manage a non-Composer compatible library
 date:   2016-04-21 18:14:55 +0000
 categories: dev php composer
+<!-- excerpt: How to load a package using Composer, which isn't available as a package -->
 ---
 
 ![vagrant](/assets/images/composer-lock.png){:class="img-responsive"}
@@ -19,7 +20,7 @@ This left me with the official, non-Composer compatible code. All 3rd party code
 
 This got me thinking about approaches for loading non-composer compatible code, or code not found on Packagist. A quick look around and I was reminded about the concept of respositories within a composer.json. The Sagepay code is available as a .zip file download, this could therefore be managed as a package within our Composer file. Perfect. As shown on the Composer site, a package definition can be as simple as:
 
-```
+{% highlight json %}
 {
     "name": "smarty/smarty",
     "version": "3.1.7",
@@ -28,12 +29,12 @@ This got me thinking about approaches for loading non-composer compatible code, 
         "type": "zip"
     }
 }
-```
+{% endhighlight %}
 
 We could certainly recreate this with our Sagepay .zip file. By defining respositories with a package, we could bring in the Sagepay code and keep it within vendor. This prevents pollution of our core code, and keeps 3rd party self-contained.
 
 On a first workthrough this is what I ended up with:
-```
+{% highlight json %}
 "repositories": [
   {
     "type": "package",
@@ -50,16 +51,16 @@ On a first workthrough this is what I ended up with:
     }
   }
 ]
-```
+{% endhighlight %}
 
 There's a few things here i'm not sure about. I've created a package name here of `sagepay/sagepay`. This is somewhat arbitrary but makes sense to me. This then allows me to add the package to my list of requirements in my `composer.json` so I can install, and update using the Composer CLI:
 
-```
+{% highlight json %}
 "require": {
     "sagepay/sagepay": "*"
     // etc etc
 },
-```  
+{% endhighlight %}
 
 The version number I have used reflects the protocol version this code is to use. As far as I can tell the code itself is not versioned in this way, and there is no reference to them adhering to Semver. I assume the version is used for the managing of updates so this is something i'll have to look at more. The other questionable element is the autoload section. The Sagepay code itself contains it's own spl autoloader which is launched by lib/sagepay.php. This file also creates a PHP Constant which is used to restrict access to the other code within their kit. For this reason i'm just using the autoload files option to load this single file, which in turn autoloads all that is needed. Effectively I now have 2 autoloaders being used but i'm comfortable that the positives outweigh the negatives here.
 

@@ -21,7 +21,7 @@ Git is central to our development workflow. No code can be merged into our codeb
 
 First thing was to get phpcs itself installed with the required coding standard. This was done by installing the following packages into the dev section of our `composer.json`:
 
-```
+{% highlight json %}
 {
   ...
   "require-dev": {
@@ -31,11 +31,11 @@ First thing was to get phpcs itself installed with the required coding standard.
   ...
 }
 
-```
+{% endhighlight %}
 
 Once installed it was just a case of creating the hook itself in `.git/hooks/PRE-COMMIT`. Much of this code was taken from a gist i've seen in many places. I would happily credit the original author but I have no idea who it was.  
 
-```
+{% highlight bash %}
 #!/bin/bash
 
 PROJECT=`php -r "echo dirname(dirname(dirname(realpath('$0'))));"`
@@ -94,7 +94,7 @@ else
         fi
     fi
 fi
-```
+{% endhighlight %}
 
 The original code for the hook file runs the supplied changes through phpcs and checks them against the PSR2 standard. However, I added a few additional things that were useful to us. First of all I added a dependency on an environment variable we would force all our developers to add. This variable would set your default preference for whether the check runs. As much as we wanted the check to always run, we decided on reflection there may be times where we want to disable it. This would now be possible via temporary overriding of the variable by running `APPLY_CODE_STYLE=false git commit`. The other enhancement I added was an interactive question for whether the user would like `phpcbf` to automagically fix all errors it was able to.
 
