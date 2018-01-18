@@ -25,8 +25,8 @@ github_username:  robjmills
 # Build settings
 markdown: kramdown
 theme: minima
-disqus:
-    shortname: robjmills
+# disqus:
+#     shortname: robjmills
 plugins:
   - jekyll-feed
 
