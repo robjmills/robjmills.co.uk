@@ -8,13 +8,13 @@ excerpt: Automating the checking and application of PHP_CodeSniffer checks using
 
 ![vagrant](/assets/images/php-fig.jpg){:class="img-responsive"}
 
-We've recently adopted the [psr2 coding standard][psr2-standard] on our application. We've always followed an informal coding standard but we decided it made sense to bite the bullet and fully adhere to psr2. If psr2 is new to you, it's a coding style guide that was developed by the [PHP Framework Interopability Group Group (aka PHP-FIG)][php-fig-link] to aid the sharing of code by enforcing a common standard:
+We've recently adopted the [PSR-2 coding standard][psr2-standard] on our application. We've always followed an informal coding standard but we decided it made sense to bite the bullet and fully adhere to PSR-2. If PSR-2 is new to you, it's a coding style guide that was developed by the [PHP Framework Interopability Group Group (aka PHP-FIG)][php-fig-link] to aid the sharing of code by enforcing a common standard:
 
 > PSR-2's purpose is to have a single style guide for PHP code that results in uniformly formatted shared code.
 
 Agreeing to adopt a coding standard is one thing, but enforcing it is another. With developers across different environments, using their own choice of editor, enforcing a set of rules can be difficult. Personally, I use PhpStorm, but occasionally i'll do something in Atom, or Vim.
 
-We were keen to make sure that adoption of psr2 would be friction-free, but consistently adopted. In this regard it made sense that it could be added to our workflow in a way that was mandatory. Encouraging devs to add rules to their editor would be a pain to maintain, and easy to override. You just know that some dev's are really going to struggle giving up their tabs!
+We were keen to make sure that adoption of PSR-2 would be friction-free, but consistently adopted. In this regard it made sense that it could be added to our workflow in a way that was mandatory. Encouraging devs to add rules to their editor would be a pain to maintain, and easy to override. You just know that some dev's are really going to struggle giving up their tabs!
 
 The popular [PHP_CodeSniffer][phpcs-link] (phpcs) tool allows checking against various coding standards, and automatic fixing via PHP Code Beautifier and Fixer (phpcbf). It made sense to make use of these external tools, enforcing their versions via Composer and hooking into that workflow.
 
@@ -88,8 +88,11 @@ else
                 then
                     exit 1
                 else
-                    echo "automagically fixing..."
-                    ./vendor/bin/phpcbf ${FILES}
+                  echo "automagically fixing files"
+                  ./Vendor/bin/phpcbf ${FILES}
+
+                  echo "re-staging updated files"
+                  git add ${FILES}
                 fi
             fi
         fi
