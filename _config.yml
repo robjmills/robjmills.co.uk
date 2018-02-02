@@ -18,13 +18,15 @@ title: robjmills.co.uk
 description: >- # this means to ignore newlines until "baseurl:"
 permalink: /:year/:month/:day/:title.html
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "robjmills.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://robjmills.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: robjmills
 github_username:  robjmills
 
 # Build settings
 markdown: kramdown
 theme: minima
+disqus:
+    shortname: robjmills
 plugins:
   - jekyll-feed
 
