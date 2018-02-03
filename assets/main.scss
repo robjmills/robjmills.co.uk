@@ -3,3 +3,22 @@
 ---
 
 @import "minima";
+
+.page-heading{
+  display: none;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+pre,code{
+  font-family: 'Fira Mono', monospace;
+}
+pre code{
+  font-size: smaller;
+}
+
+h1,h2,h3,h4,.site-title{
+  font-family: 'Bree Serif', serif;
+}
