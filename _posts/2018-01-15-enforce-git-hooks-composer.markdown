@@ -8,7 +8,7 @@ excerpt: Using composer install to enforce installation of Git hooks.
 
 ![vagrant](/assets/images/git.png){:class="img-responsive"}
 
-In a [previous article]({% post_url 2018-01-14-automatic-psr2-coding-standard %}) I discussed about automatically applying the psr2 coding standard using a Git pre-commit hook. In that post, I wrote about the importance of making sure these standards were followed, but also about how to make this easy for the developers.
+In a [previous article]({% post_url 2018-01-14-automatic-psr2-coding-standard %}) I discussed about automatically applying the PSR-2 coding standard using a Git pre-commit hook. In that post, I wrote about the importance of making sure these standards were followed, but also about how to make this easy for the developers.
 
 At the time I was working on this, we had a number of things happening in our `repo/.git/hooks/pre-commit` file. When a new developer joined the team we had to make sure they added the hooks, alongside everything else. I was sure we could do better here.
 
