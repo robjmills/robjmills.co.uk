@@ -1,0 +1,28 @@
+---
+layout: post
+title:  This week
+date:   2019-02-20 12:14:55 +0000
+categories: blog this-week
+excerpt: 
+---
+
+It's hard to find time to write articles these days. In truth, i've always struggled to make time. I post links occasionally on twitter to things that have interested me but it's difficult to track these down later too. I've decided to try putting together a post each week where I highlight things i've found interesting or useful. This will be the first one, let's see how it goes.
+
+**What i've listened to**
+
+- [Feel Better, Live More with Dr Rangan Chatterjee - How Social Media Could Be Making You Ill with Cal Newport](https://drchatterjee.com/social-media-making-ill-cal-newport/) I dip in an out of this excellent podcast, and this was a really thought provoking episode which prompted my reading this week _(see below)_.
+- [Full Stack radio / Ben Orenstein - Our All-Time Favorite Refactorings](http://www.fullstackradio.com/78) A great intro to some really useful refactorings.
+
+**What i'm reading**
+
+- [Digitial minimalism by Cal Newport](http://calnewport.com/books/digital-minimalism/) I'm only a few chapters into this book but it feels like a bit of a game changer for me. I've felt for a while now that technology is pulling me away from the moment. I stopped using Facebook a few years ago as I felt it made me unhappy. It may seem at odds with my career but I feel like more needs to change, i'll see how this book helps.
+- [The Myth Of The Spoiled Child by Alfie Kohn](https://www.alfiekohn.org/myth-spoiled-child/) This isn't the easiest read but it's got a lot of great insights into the lack of evidence that permissive parenting has any ill effects on your kids.
+
+**Articles i've enjoyed**
+
+- [Reading in the Age of Constant Distraction](https://www.theparisreview.org/blog/2019/02/08/reading-in-the-age-of-constant-distraction/) Feels like there's a bit of a theme here. 
+> Here, on the internet, is a nowhere space, a shallow time. It is a flat and impenetrable surface. But with a book, we dive in; we are sucked in; we are immersed, body and soul
+
+**My open tabs**
+
+- [Lessons from 6 software rewrite stories](https://medium.com/@herbcaudill/lessons-from-6-software-rewrite-stories-635e4c8f7c22) Seen this mentioned a bunch. One to read soon.
