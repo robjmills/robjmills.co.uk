@@ -3,7 +3,7 @@ layout: post
 title:  This week
 date:   2019-02-20 12:14:55 +0000
 categories: blog this-week
-excerpt: 
+excerpt: Various links on the theme of technology and health
 ---
 
 It's hard to find time to write articles these days. In truth, i've always struggled to make time. I post links occasionally on twitter to things that have interested me but it's difficult to track these down later too. I've decided to try putting together a post each week where I highlight things i've found interesting or useful. This will be the first one, let's see how it goes.
